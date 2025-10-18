@@ -1,0 +1,30 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+build/
+
+
+# Environment
+.env
+.env.*
+!.env.example
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Test files
+*.test
+*_test.go.bak
+testdata/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories
+vendor/

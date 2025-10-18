@@ -1,0 +1,200 @@
+basePath: /api/v1
+definitions:
+  employeeEntity.Employee:
+    properties:
+      created_at:
+        type: string
+      email:
+        example: john.doe@example.com
+        type: string
+      id:
+        example: 1
+        type: integer
+      name:
+        example: John Doe
+        type: string
+      position:
+        example: Software Engineer
+        type: string
+      salary:
+        example: 100000
+        type: number
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: CRUD Api for employees
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: CRUD API
+  version: 1.2.0
+paths:
+  /api/v1/employees:
+    get:
+      consumes:
+      - application/json
+      description: Get a list of all employees available
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/employeeEntity.Employee'
+        "404":
+          description: not found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Get All Employees
+      tags:
+      - employees
+    post:
+      consumes:
+      - application/json
+      description: Create a new employeee
+      parameters:
+      - description: Employee data
+        in: body
+        name: employee
+        required: true
+        schema:
+          $ref: '#/definitions/employeeEntity.Employee'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/employeeEntity.Employee'
+        "404":
+          description: not found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Create new employee
+      tags:
+      - employees
+  /api/v1/employees/{employeeId}:
+    delete:
+      consumes:
+      - application/json
+      description: delete an empkloye
+      parameters:
+      - description: Employee ID
+        in: path
+        name: employeeId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/employeeEntity.Employee'
+        "404":
+          description: not found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: delete employee
+      tags:
+      - employees
+    get:
+      consumes:
+      - application/json
+      description: Get employee By ID
+      parameters:
+      - description: Employee ID
+        in: path
+        name: employeeId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/employeeEntity.Employee'
+        "404":
+          description: not found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Get Employee By ID
+      tags:
+      - employees
+    put:
+      consumes:
+      - application/json
+      description: Update an employee
+      parameters:
+      - description: Employee ID
+        in: path
+        name: employeeId
+        required: true
+        type: integer
+      - description: Employee data
+        in: body
+        name: employee
+        required: true
+        schema:
+          $ref: '#/definitions/employeeEntity.Employee'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/employeeEntity.Employee'
+        "404":
+          description: not found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "500":
+          description: Internal server error
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Update employee
+      tags:
+      - employees
+swagger: "2.0"
