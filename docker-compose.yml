@@ -3,9 +3,9 @@ services:
     image: postgres:15-alpine
     container_name: employee_db
     environment:
-      POSTGRES_DB: employee_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: fresh7182
+      POSTGRES_DB: ${DB_NAME:-employee_db}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./cmd/migrate/migrations/000001_create_employee_table_up.sql:/docker-entrypoint-initdb.d/init.sql
@@ -27,11 +27,11 @@ services:
     environment:
       DB_HOST: postgres
       DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: fresh7182
-      DB_NAME: employee_db
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME:-employee_db}
       DB_SSLMODE: disable
-      SERVER_PORT: 8080
+      SERVER_PORT: ${SERVER_PORT:-8080}
     ports:
       - "8080:8080"
     depends_on:

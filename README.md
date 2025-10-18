@@ -18,7 +18,7 @@ Before you begin, ensure you have installed:
 
 ```bash
 git clone https://github.com/MaulanaAhmadSulami/juke_test.git
-cd project_hometest
+cd juke_test
 ```
 
 ### 2. Environment Configuration
