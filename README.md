@@ -197,7 +197,7 @@ docker exec -i employee_db psql -U postgres -d employee_db < cmd/migrate/migrati
 | DB_HOST        | Database host            | localhost     |
 | DB_PORT        | Database port            | 5432          |
 | DB_USER        | Database user            | postgres      |
-| DB_PASSWORD    | Database password        | postgres      |
+| DB_PASSWORD    | Database password        | mypassword      |
 | DB_NAME        | Database name            | employee_db   |
 | DB_SSLMODE     | SSL mode                 | disable       |
 | SERVER_PORT    | API server port          | 8080          |
