@@ -54,12 +54,12 @@ http://localhost:8080/swagger/index.html
 
 ### 4. Seed Sample Data (Optional)
 
-After starting the application, you can add sample:
+After starting the application, run these:
 
 ```bash
 # Create Employee 1
 curl -X POST http://localhost:8080/api/v1/employees \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: application/json" 
   -d '{
     "name": "John Doe",
     "email": "john.doe@company.com",
