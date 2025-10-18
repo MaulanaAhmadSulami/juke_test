@@ -23,17 +23,7 @@ cd project_hometest
 
 ### 2. Environment Configuration
 
-Create a `.env` file in the project root:
-
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=postgres
-DB_NAME=employee_db
-DB_SSLMODE=disable
-SERVER_PORT=8080
-```
+Create a `.env` file per your setup.
 
 ### 3. Run with Docker
 
