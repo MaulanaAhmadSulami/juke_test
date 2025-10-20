@@ -18,7 +18,7 @@
     "host": "localhost:8080",
     "basePath": "/api/v1",
     "paths": {
-        "/api/v1/employees": {
+        "/employees": {
             "get": {
                 "description": "Get a list of all employees available",
                 "consumes": [
@@ -109,7 +109,7 @@
                 }
             }
         },
-        "/api/v1/employees/{employeeId}": {
+        "/employees/{employeeId}": {
             "get": {
                 "description": "Get employee By ID",
                 "consumes": [

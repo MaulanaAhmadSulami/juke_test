@@ -24,7 +24,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/v1/employees": {
+        "/employees": {
             "get": {
                 "description": "Get a list of all employees available",
                 "consumes": [
@@ -115,7 +115,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v1/employees/{employeeId}": {
+        "/employees/{employeeId}": {
             "get": {
                 "description": "Get employee By ID",
                 "consumes": [

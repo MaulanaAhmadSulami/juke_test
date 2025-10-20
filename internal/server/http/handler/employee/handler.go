@@ -37,7 +37,7 @@ func newHttpHandler(employeeService service.EmployeesService, logger *zap.Sugare
 // @Success 200 {object} employeeEntity.Employee
 // @Failure 500 {object} map[string]string	"Internal server error"
 // @Failure 404 {object} map[string]string	"not found"
-// @Router /api/v1/employees [get]
+// @Router /employees [get]
 func (h *HttpHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
@@ -62,7 +62,7 @@ func (h *HttpHandler) GetAll(w http.ResponseWriter, r *http.Request) {
 // @Success 200 {object}  employeeEntity.Employee
 // @Failure 500 {object} map[string]string	"Internal server error"
 // @Failure 404 {object} map[string]string	"not found"
-// @Router /api/v1/employees/{employeeId} [get]
+// @Router /employees/{employeeId} [get]
 func(h *HttpHandler) GetById(w http.ResponseWriter, r *http.Request){
 	ctx := r.Context()
 
@@ -98,7 +98,7 @@ func(h *HttpHandler) GetById(w http.ResponseWriter, r *http.Request){
 // @Success 201 {object} employeeEntity.Employee
 // @Failure 500 {object} map[string]string	"Internal server error"
 // @Failure 404 {object} map[string]string	"not found"
-// @Router /api/v1/employees [post]
+// @Router /employees [post]
 func (h *HttpHandler) Create(w http.ResponseWriter, r *http.Request){
 	ctx := r.Context()
 
@@ -137,7 +137,7 @@ func (h *HttpHandler) Create(w http.ResponseWriter, r *http.Request){
 // @Success 200 {object} employeeEntity.Employee
 // @Failure 404 {object} map[string]string	"not found"
 // @Failure 500 {object} map[string]string	"Internal server error"
-// @Router /api/v1/employees/{employeeId} [put]
+// @Router /employees/{employeeId} [put]
 func (h *HttpHandler) Update(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
@@ -184,7 +184,7 @@ func (h *HttpHandler) Update(w http.ResponseWriter, r *http.Request) {
 // @Success 200 {object} employeeEntity.Employee
 // @Failure 404 {object} map[string]string	"not found"
 // @Failure 500 {object} map[string]string	"Internal server error"
-// @Router /api/v1/employees/{employeeId} [delete]
+// @Router /employees/{employeeId} [delete]
 func (h *HttpHandler) Delete(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 

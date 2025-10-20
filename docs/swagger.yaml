@@ -34,7 +34,7 @@ info:
   title: CRUD API
   version: 1.2.0
 paths:
-  /api/v1/employees:
+  /employees:
     get:
       consumes:
       - application/json
@@ -94,7 +94,7 @@ paths:
       summary: Create new employee
       tags:
       - employees
-  /api/v1/employees/{employeeId}:
+  /employees/{employeeId}:
     delete:
       consumes:
       - application/json
