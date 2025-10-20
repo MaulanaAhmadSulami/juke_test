@@ -40,7 +40,7 @@ import (
 	httpSwagger "github.com/swaggo/http-swagger"
 )
 
-const VERSION = "1.3.0"
+const VERSION = "1.1.4"
 
 func main() {
 	logger, err := zap.NewProduction()
