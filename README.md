@@ -31,17 +31,8 @@ Create a `.env` file per .env.example
 # Start all services (PostgreSQL + API)
 docker-compose up --build
 
-# Run in background
-docker-compose up -d --build
-
-# View logs
-docker-compose logs -f
-
 # Stop services
 docker-compose down
-
-# Stop and remove volumes
-docker-compose down -v
 ```
 
 ## 📚 API Documentation
@@ -162,32 +153,6 @@ CREATE TABLE employees (
 
 ```bash
 go test ./...
-```
-
-### Regenerate Swagger Docs
-
-```bash
-# Install swag CLI (first time only)
-go install github.com/swaggo/swag/cmd/swag@latest
-
-# Generate docs
-swag init -g cmd/app/main.go
-```
-
-### Database Management
-
-```bash
-# Connect to PostgreSQL
-docker exec -it employee_db psql -U postgres -d employee_db
-
-# Run migration manually
-docker exec -i employee_db psql -U postgres -d employee_db < cmd/migrate/migrations/000001_create_employee_table_up.sql
-
-# View tables
-\dt
-
-# Exit
-\q
 ```
 
 ## 🐛 Troubleshooting
