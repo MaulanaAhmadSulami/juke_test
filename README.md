@@ -23,7 +23,7 @@ cd juke_test
 
 ### 2. Environment Configuration
 
-Create a `.env` file per your setup.
+Create a `.env` file per .env.example
 
 ### 3. Run with Docker
 
@@ -189,18 +189,6 @@ docker exec -i employee_db psql -U postgres -d employee_db < cmd/migrate/migrati
 # Exit
 \q
 ```
-
-## 🔒 Environment Variables
-
-| Variable       | Description              | Default       |
-|----------------|--------------------------|---------------|
-| DB_HOST        | Database host            | localhost     |
-| DB_PORT        | Database port            | 5432          |
-| DB_USER        | Database user            | postgres      |
-| DB_PASSWORD    | Database password        | mypassword      |
-| DB_NAME        | Database name            | employee_db   |
-| DB_SSLMODE     | SSL mode                 | disable       |
-| SERVER_PORT    | API server port          | 8080          |
 
 ## 🐛 Troubleshooting
 
