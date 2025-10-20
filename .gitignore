@@ -13,18 +13,3 @@ build/
 .env
 .env.*
 !.env.example
-# IDEs and Editors
-.vscode/
-.idea/
-
-# Test files
-*.test
-*_test.go.bak
-testdata/
-
-# Go workspace file
-go.work
-go.work.sum
-
-# Dependency directories
-vendor/
