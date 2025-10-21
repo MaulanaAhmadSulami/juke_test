@@ -147,14 +147,6 @@ CREATE TABLE employees (
 );
 ```
 
-## 🔧 Development
-
-### Run Tests
-
-```bash
-go test ./...
-```
-
 ## 🐛 Troubleshooting
 
 ### Port Already in Use
