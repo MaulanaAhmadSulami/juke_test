@@ -181,6 +181,31 @@ docker-compose restart
 docker exec -i employee_db psql -U postgres -d employee_db < cmd/migrate/migrations/000001_create_employee_table_up.sql
 ```
 
+### Auth error
+
+### Delete any existing images, volumes
+
+## 1. Delete all related images by running command below
+
+docker images
+
+## 2. Delete them
+docker rm images [images-id]
+
+## 3. Find Volume names
+docker volume ls
+
+## 4. Delete volumes
+docker volume rm [VOLUME_NAME]
+
+## 5. Repeat step 3
+
+# Start all services (PostgreSQL + API)
+docker compose build --no-cache
+
+## After done built run this
+docker compose up
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
