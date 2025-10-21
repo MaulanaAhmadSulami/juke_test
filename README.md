@@ -29,7 +29,10 @@ Create a `.env` file per .env.example
 
 ```bash
 # Start all services (PostgreSQL + API)
-docker-compose up --build
+docker compose build --no-cache
+
+## After done built run this
+docker compose up
 
 # Stop services
 docker-compose down
