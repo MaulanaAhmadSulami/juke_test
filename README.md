@@ -182,8 +182,9 @@ docker exec -i employee_db psql -U postgres -d employee_db < cmd/migrate/migrati
 ```
 
 ### Auth error
-
+```bash
 ### Delete any existing images, volumes
+
 
 ## 1. Delete all related images by running command below
 
@@ -205,6 +206,7 @@ docker compose build --no-cache
 
 ## After done built run this
 docker compose up
+```
 
 ## 📝 License
 

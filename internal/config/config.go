@@ -25,7 +25,7 @@ type DbConfig struct {
 }
 
 func Load() (*Config, error){
-	if err := godotenv.Load(); err != nil {
+	if err := godotenv.Load(".env"); err != nil {
 		log.Println(".env was nowhtere to be found");
 	}
 
