@@ -33,7 +33,7 @@ func Load() (*Config, error){
 		DBHost: getEnv("DB_HOST", "localhost"),
 		DBPort: getEnv("DB_PORT", "5433"),
 		DBUser: getEnv("DB_USER", "postgres"),
-		DBPassword: getEnv("DB_PASSWORD", "fresh7182"),
+		DBPassword: getEnv("DB_PASSWORD", "postgres"),
 		DBName: getEnv("DB_NAME", "employee_db"),
 		DBSSLMode: getEnv("DB_SSLMODE", "disable"),
 		ServerPort: getEnv("SERVER_PORT", "8080"),
